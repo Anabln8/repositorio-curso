@@ -1,0 +1,10 @@
+# Archivos de log
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.~*
