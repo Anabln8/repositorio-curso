@@ -1,2 +1,1 @@
-
-HOLA, esto es un conflicto
+HOLA, ESTO ES UNA PRUEBA.
