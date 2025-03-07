@@ -1,0 +1,9 @@
+/* Archivo CSS para el proyecto */
+
+.destacado {
+    font-weight: bold;
+}
+
+#contenedor{
+    margin:0 auto;
+}
