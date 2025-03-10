@@ -1,9 +1,149 @@
 /* Archivo CSS para el proyecto */
 
+body{
+    font-family:"Lato", sans-serif;
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .destacado {
     font-weight: bold;
 }
 
 #contenedor{
+    max-width: 1140px;
     margin:0 auto;
 }
+.container{
+    max-width: 1140px;
+    margin:0 auto;
+}
+
+h2,h3{
+    color:#46d381;
+    font-family: 'Arial';
+}
+
+.box{
+    padding: 20px;
+    border: 1px solid #333;
+    margin: 10px;
+}
+.box2{
+    width: 600px;
+    margin: 0 auto;
+    background-color: rgb(145, 145, 145);
+    height: 20px;
+}
+.text-right{
+    text-align: right;
+    text-decoration: underline;
+}
+
+
+/* Ejercicio 11 - Fondo degradado */
+.degradado{
+    background: linear-gradient(to right, #27a5e0, #46d381);
+    padding: 20px 0px;
+    margin-top:20px
+}
+
+/* Ejercicio 12 - Border-radius */
+.circulo{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+/* Ejercicio 13 - Display inline-block */
+.inline{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #222222;
+    color: #ffffff;
+    padding: 10px;
+    
+}
+
+ /* Ejercicio 14 - Posicionamiento relativo */
+.relativo{
+    position: relative;
+    top: 15px;
+    left: 25px;
+    width: 100px;
+    height: 100px;
+    background-color: #575757;
+    color: #ffffff;
+    padding: 10px;
+}
+
+ /* Ejercicio 15 - Posicionamiento absoluto */
+.absoluto{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    padding-top: 10px;
+}
+button{
+    background-color: #46d381;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+}
+button:hover{
+    background-color: #27a5e0;
+}
+.section-border{
+    border: 1px solid #333;
+    border-radius: 16px;
+    margin: 24px;
+    padding: 24px;
+    position: relative;
+    height: 150px;
+}
+
+ /* Ejercicio 16 y 17 - Menú con flexbox + transición simple */
+ nav{
+    width: 100%;
+    background-color: #333;
+ }
+ .menu-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 16px;
+}
+.logo img {
+    height: 50px;
+}
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+.menu a:hover {
+    color: #46d381; 
+    
+}
+

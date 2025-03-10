@@ -5,30 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi página - css</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      h1{
-        color: blue;
+      h1 {
+        color: #27a5e0;
       }
     </style>
   </head>
   <html>
     <body>
-
       <header>
-        <h1>Bienvenidos a Mi Página Web</h1>
-        <p>Esta es una página de ejemplo para el ejercicio</p>
+        <nav>
+          <div class="container menu-nav">
+            <div class="logo">
+              <img src="https://via.placeholder.com/100x50" alt="Logo">
+          </div>
+  
+          <ul class="menu">
+              <li><a href="#">Productos</a></li>
+              <li><a href="#">Contacto</a></li>
+          </ul>
+          </div>
+      </nav>
       </header>
 
       <main>
-        <section>
-        <div id="contenedor">
-          <h2>Acerca de Nosotros</h2>
-          <p style="color: red;">Somos una empresa dedicada a ofrecer soluciones web</p>
-        </div>
+        <section id="contenedor">
+          <div>
+            <h2>Acerca de Nosotros</h2>
+            <p style="color: rgb(160, 17, 17)">
+              Somos una empresa dedicada a ofrecer soluciones web
+            </p>
+            <p class="text-right">
+              Somos una empresa dedicada a ofrecer soluciones web
+            </p>
+          </div>
         </section>
 
-        <section>
-          <h2>Nuestros Servicios</h2>
+        <section class="container">
+          <h3>Nuestros Servicios</h3>
           <ol type="A">
             <li>Desarrollo de Software a Medida</li>
             <li>Consultoría en Transformación Digital</li>
@@ -37,10 +57,37 @@
           <a class="destacado" href="https://www.ejemplo.com" target="_blank"
             >Ver más servicios</a
           >
+
+          <div class="box"></div>
+          <div class="box2"></div>
+        </section>
+
+        <section class="degradado">
+          <div id="contenedor">
+            <div class="circulo"></div>
+          </div>
+        </section>
+
+        <section class="container">
+          <div>
+            <div class="inline">Posición inline-block</div>
+            <div class="inline">Posición inline-block</div>
+            <div class="inline">Posición inline-block</div>
+          </div>
+        </section>
+
+        <section class="container">
+          <div class="relativo">Posición relativa</div>
+        </section>
+
+        <section class="section-border">
+          <div class="container">
+            <button class="absoluto">Posición absoluta</button>
+          </div>
         </section>
       </main>
-      
-      <footer>
+
+      <footer class="container">
         <p>© 2025 Mi Página Web. Todos los derechos reservados.</p>
       </footer>
     </body>
