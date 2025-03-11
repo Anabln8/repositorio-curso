@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f4f4f4;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Estilos cabecera - Sección 1*/
+header {
+  background-color: rgb(30, 30, 30);
+}
+nav {
+  width: 100%;
+  padding: 10px 32px;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  list-style: none;
+}
+nav ul li i {
+  color: #ffffff;
+  font-size: 14px;
+  margin-right: 8px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #d698e6;
+  transition: color 0.25s ease-in-out;
+}
+
+/* Selector de ID */
+
+#titulo {
+  text-align: center;
+}
+
+/* Sección 2 */
+
+.grid{
+    display: grid;
+    grid-column: 1fr 1fr 1fr;
+    grid-row: 1fr 1fr 1fr;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+.proyecto {
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 3px 5px 16px 0px rgb(92 92 92 / 18%);
+}
+.proyecto img {
+  width: 100%;
+  border-radius: 8px;
+
+}
+
+.proyecto:hover img {
+  opacity: 0.5; /* Opacidad al hover */
+}
+.proyecto h2::first-letter {
+  font-size: 24px;
+  color: #d698e6;
+}
+.destacado{
+    background: #e5e7ff;
+    border-radius: 10px;
+    
+}
+.proyecto:nth-child(3n){
+    background: #dddddd;
+
+}
+
+/* Sección 3 */
+
+.formulario{
+    
+}
