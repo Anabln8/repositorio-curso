@@ -11,35 +11,40 @@ header{
     flex-direction: column;
     align-items: center;
 }
-.destacado {
-    font-weight: bold;
-}
-
-#contenedor{
-    max-width: 1140px;
-    margin:0 auto;
-}
 .container{
     max-width: 1140px;
     margin:0 auto;
 }
-
+/* Ejercicio 4 - Selectores de clase */
+.destacado {
+    font-weight: bold;
+}
+/* Ejercicio 5 - Selectores de ID */
+#contenedor{
+    max-width: 1140px;
+    margin:0 auto;
+}
+/* Ejercicio 6 - Agrupar selectores */
 h2,h3{
     color:#46d381;
     font-family: 'Arial';
 }
-
+/* Ejercicio 7 - Modelo de caja básico */
 .box{
     padding: 20px;
     border: 1px solid #333;
     margin: 10px;
+    border-radius: 8px;
 }
+/* Ejercicio 8 - Centrar elemento con margen */
 .box2{
     width: 600px;
     margin: 0 auto;
     background-color: rgb(145, 145, 145);
     height: 20px;
+    border-radius: 8px;
 }
+/* Ejercicio 9 - Alinear texto */
 .text-right{
     text-align: right;
     text-decoration: underline;
@@ -70,7 +75,7 @@ h2,h3{
     background-color: #222222;
     color: #ffffff;
     padding: 10px;
-    
+    border-radius: 8px;   
 }
 
  /* Ejercicio 14 - Posicionamiento relativo */
@@ -83,9 +88,10 @@ h2,h3{
     background-color: #575757;
     color: #ffffff;
     padding: 10px;
+    border-radius: 8px;
 }
 
- /* Ejercicio 15 - Posicionamiento absoluto */
+ /* Ejercicio 15 y 17 - Posicionamiento absoluto + transición simple */
 .absoluto{
     position: absolute;
     top: 24px;
@@ -105,6 +111,7 @@ button{
 }
 button:hover{
     background-color: #27a5e0;
+    transition: background-color 0.5s ease-in-out;
 }
 .section-border{
     border: 1px solid #333;
@@ -115,7 +122,7 @@ button:hover{
     height: 150px;
 }
 
- /* Ejercicio 16 y 17 - Menú con flexbox + transición simple */
+ /* Ejercicio 16 - Menú con flexbox */
  nav{
     width: 100%;
     background-color: #333;
@@ -140,10 +147,118 @@ button:hover{
     color: white;
     font-size: 16px;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
 }
+
+/* Ejercicio 18 - Animación con keyframes */
 .menu a:hover {
-    color: #46d381; 
-    
+    animation: colorMenu 2s infinite;   
+}
+@keyframes colorMenu {
+    0% {
+        color: var(--color-primario);
+    }
+    50% {
+        color: var(--color-secundario);
+    }
+    100% {
+        color: #dfd182;
+    }
+}
+
+/* Ejercicio 19 - Media Queries */
+@media (max-width: 600px){
+    .logo img{
+        display: none;
+    }
+}
+/* Ejercicio 20 - Pseudo-elementos (::before) */
+.menu a::before {
+    content: "·";
+    margin-right: 4px;
+}
+/* Ejercicio 21 - CSS Variables */
+:root {
+    --color-primario: #46d381;
+    --color-secundario: #27a5e0;
+}
+/* Ejercicio 22 y 23 - Transformaciones 2D y Box-shadow */
+.cuadrado{
+    width: 100px;
+    height: 100px;
+    background-color: #7a7a7a;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 12px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 16px rgba(77, 77, 77, 0.5);
+}
+.rotate{
+    transform: rotate(25deg);
+}
+/* Ejercicio 24 - Texto en columnas */
+.columnas{
+    column-count: 2;
+    column-gap: 32px;
+    padding-top: 32px;
+    text-align: justify;
+}
+/* Ejercicio 25 - Filtros CSS */
+.filter{
+    filter: grayscale(100%);
+    border-radius: 16px;
+}
+/* Ejercicio 26 - Efecto overlay */
+.contenedor-overlay{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+.contenedor-overlay img {
+    display: block;
+    width: 100%;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay:hover {
+    opacity: 1; 
+}
+
+/* Ejercicio 27 - Animación de carga */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:24vh;
+}
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.2); 
+    border-top-color: #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 

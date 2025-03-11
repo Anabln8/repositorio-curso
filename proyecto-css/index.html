@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi página - css</title>
+    <!-- Ejercicio 3 - Enlace a CSS externo -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Ejercicio 10 - Fuentes personalizadas -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- Ejercicio 2 - Estilos internos -->
     <style>
       h1 {
         color: #27a5e0;
@@ -23,21 +26,22 @@
         <nav>
           <div class="container menu-nav">
             <div class="logo">
-              <img src="https://via.placeholder.com/100x50" alt="Logo">
-          </div>
-  
-          <ul class="menu">
+              <img src="https://via.placeholder.com/100x50" alt="Logo" />
+            </div>
+
+            <ul class="menu">
               <li><a href="#">Productos</a></li>
               <li><a href="#">Contacto</a></li>
-          </ul>
+            </ul>
           </div>
-      </nav>
+        </nav>
       </header>
 
       <main>
         <section id="contenedor">
           <div>
             <h2>Acerca de Nosotros</h2>
+            <!-- Ejercicio 1 - Cambiar color de texto (Inline CSS)-->
             <p style="color: rgb(160, 17, 17)">
               Somos una empresa dedicada a ofrecer soluciones web
             </p>
@@ -84,6 +88,36 @@
           <div class="container">
             <button class="absoluto">Posición absoluta</button>
           </div>
+        </section>
+
+        <section class="container">
+          <div class="cuadrado rotate">
+            Transformación<br />
+            2D
+          </div>
+        </section>
+
+        <section class="container">
+          <p class="columnas">
+            Ofrecemos diseño web profesional, gestión de redes sociales y
+            posicionamiento SEO para mejorar la presencia en línea de tu
+            negocio. Creamos sitios atractivos, optimizados y adaptados a tus
+            necesidades, además de estrategias digitales que aumentan tu
+            alcance. También brindamos marketing digital, tiendas en línea y
+            soporte técnico para garantizar el éxito de tu web. Con campañas
+            publicitarias efectivas y mantenimiento continuo, te ayudamos a
+            crecer en el mundo digital.
+          </p>
+          <div class="contenedor-overlay">
+            <img class="filter" src="laboratory.jpg" width="150px" height="auto"
+              alt="Imagen" />
+            <div class="overlay">Texto de Overlay</div>
+          </div>
+        </section>
+        <section class="container">
+          <div class="spinner-container">
+            <div class="spinner"></div>
+        </div>
         </section>
       </main>
 
