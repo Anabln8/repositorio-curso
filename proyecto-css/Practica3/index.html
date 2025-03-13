@@ -1,44 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Tecnología</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Menú de Categorías -->
-    <nav class="menu">
-        <ul class="menu__list">
-            <li class="menu__item"><a href="#" class="menu__link" category="nuevo">Electrodomésticos</a>
-                <ul class="submenu">
-                    <li class="submenu__item"><a href="#" class="submenu__link">Licuadoras</a></li>
-                    <li class="submenu__item"><a href="#" class="submenu__link">Microondas</a></li>
-                </ul>
-            </li>
-            <li class="menu__item"><a href="#" class="menu__link">Moda</a>
-                <ul class="submenu">
-                    <li class="submenu__item"><a href="#" class="submenu__link">Ropa</a></li>
-                    <li class="submenu__item"><a href="#" class="submenu__link">Zapatos</a></li>
-                </ul>
-            </li>
-            <li class="menu__item"><a href="#" class="menu__link">Tecnología</a>
-                <ul class="submenu">
-                    <li class="submenu__item"><a href="#" class="submenu__link">Laptops</a></li>
-                    <li class="submenu__item"><a href="#" class="submenu__link">Smartphones</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-    
-    <!-- Producto Destacado -->
-    <section class="producto">
-        <div class="producto__card">
-            <img src="producto.jpg" alt="Producto" class="producto__card-image">
-            <h3 class="producto__card-title">Smartphone X</h3>
-            <p class="producto__card-price producto__card-price--oferta">$599.99</p>
-            <button class="producto__card-button">Añadir al carrito</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda de Plantas y Jardinería</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header con menú y logo -->
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="logo">
+            <img
+              src="logo.png"
+              alt="Tienda de Plantas y Jardinería"
+              class="logo__image"
+            />
+          </div>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="#">Plantas de Interior</a></li>
+              <li class="menu__item"><a href="#">Herramientas</a></li>
+              <li class="menu__item"><a href="#">Macetas</a></li>
+              <li class="menu__item"><a href="#">Contacto</a></li>
+              <li><a href="#carrito" class="carrito-toggle"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+          </nav>
+          
         </div>
+      </div>
+    </header>
+
+    <!-- Sección de Productos -->
+    <section>
+      <div class="container">
+        <div class="productos">
+          <div class="producto">
+            <img src="img\planta.jpg" alt="Planta Suculenta" />
+            <div class="producto__info">
+              <h3 class="producto__card-title">Planta Colgante</h3>
+              <p class="producto__card-price">$9.99</p>
+              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+            </div>
+          </div>
+          <div class="producto">
+            <img src="img\cactus.jpg" alt="Cactus Mini" />
+            <div class="producto__info">
+              <h3 class="producto__card-title">Cactus Mini</h3>
+              <p class="producto__card-price">$12.99</p>
+              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+            </div>
+          </div>
+          <div class="producto">
+            <img src="img\cactus.jpg" alt="Orquídea" />
+            <div class="producto__info">
+              <h3 class="producto__card-title">Orquídea Blanca</h3>
+              <p class="producto__card-price">$24.99</p>
+              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+            </div>
+          </div>
+          <div class="producto">
+            <img src="img\cactus.jpg" alt="Helecho" />
+            <div class="producto__info">
+              <h3 class="producto__card-title">Helecho Verde</h3>
+              <p class="producto__card-price">$14.99</p>
+              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+            </div>
+          </div>
+          <div class="producto">
+            <img src="img\cactus.jpg" alt="Crisantemo" />
+            <div class="producto__info">
+              <h3 class="producto__card-title">Crisantemo</h3>
+              <p class="producto__card-price">$19.99</p>
+              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+            </div>
+          </div>
+          <div class="producto">
+            <img src="img\cactus.jpg" alt="Bonsái" />
+            <div class="producto__info">
+              <h3 class="producto__card-title">Bonsái</h3>
+              <p class="producto__card-price">$39.99</p>
+              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-</body>
+
+    <!-- Carrito de Compras (Lateral) -->
+    <div id="carrito" class="carrito">
+      <a href="#" class="carrito-cerrar">X</a>
+      <h3>Carrito de Compras</h3>
+      <div class="carrito__items">
+        <p>No hay productos en el carrito.</p>
+      </div>
+    </div>
+  </body>
 </html>

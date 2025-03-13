@@ -1,124 +1,167 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    background: #ffffff;
+    font-size: 16px;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+/* Header */
+.header {
+    background: #2E2C2F;
+    
+}
+.header__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 80px;
+}
+
+.logo__image {
+    max-height: 60px;
 }
 
 /* Menú de Categorías */
-.menu {
-    background-color: #333;
-    padding: 10px;
-}
-
 .menu__list {
     list-style: none;
     display: flex;
-    justify-content: center;
     padding: 0;
+    margin: 0;
+    align-items: center;
 }
 
 .menu__item {
-    position: relative;
     margin: 0 15px;
+}
+.menu__item a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+}
+.menu__item a i{
+    font-size: 14px;
+    padding-left: 32px;
 }
 
 .menu__link {
     text-decoration: none;
-    color: white;
-    padding: 10px;
-    display: inline-block;
+    color: #ffffff; /* Color blanco para los enlaces */
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-.menu__link:hover {
-    color: #ff9900;
+.menu__link:visited {
+    color: #ffffff; /* Evita el cambio de color en enlaces visitados */
 }
 
-.menu__link[category="nuevo"] {
-    color: #ff6600;
+.menu__link:hover,
+.menu__link:focus {
+    color: #7AB884; /* Color principal al pasar el mouse o enfocar */
 }
 
-.submenu {
-    display: none;
-    position: absolute;
-    background-color: #444;
-    padding: 10px;
-    list-style: none;
-    top: 100%;
-    left: 0;
+.menu__link:active {
+    color: #ED6A5E; /* Color de alerta cuando se presiona */
 }
 
-.menu__item:hover .submenu {
-    display: block;
+/* Productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem;
 }
 
-.submenu__item {
-    margin-bottom: 5px;
-}
-
-.submenu__link {
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding: 5px 10px;
-}
-
-.submenu__link:hover {
-    background-color: #ff9900;
-}
-
-/* Producto Destacado */
 .producto {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.producto__card {
-    background: white;
-    padding: 20px;
+    background: #ffffff;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
 }
 
-.producto__card:hover {
-    transform: scale(1.05);
+.producto:hover {
+    transform: scale(1.03);
 }
 
-.producto__card-image {
+.producto:hover > img {
+    transform: scale(1.1);
+}
+
+.producto img {
     max-width: 100%;
     border-radius: 10px;
 }
 
+.producto__info {
+    text-align: left;
+    padding: 10px 0;
+}
+
 .producto__card-title {
-    font-size: 1.5rem;
-    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #2E2C2F;
+    margin: 5px 0;
 }
 
 .producto__card-price {
-    font-size: 1.2rem;
-    color: #333;
+    font-size: 1.1rem;
+    color: #7AB884;
+    font-weight: 700;
 }
 
-.producto__card-price--oferta {
-    color: #e60000;
-    font-weight: bold;
-}
-
-.producto__card-button {
-    background: #ff9900;
-    border: none;
-    padding: 10px 15px;
+.agregar-carrito {
+    background: #7AB884;
     color: white;
-    font-size: 1rem;
+    padding: 10px 15px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background 0.3s ease;
 }
 
-.producto__card-button:hover {
-    background: #e68900;
+.agregar-carrito:hover {
+    background: #5a986f;
+}
+
+/* Carrito flotante */
+.carrito {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: #2E2C2F;
+    color: white;
+    padding: 20px;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#carrito:target {
+    transform: translateX(0);
+}
+
+.carrito-toggle {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.carrito-toggle i {
+    font-size: 14px;
+    padding-left: 32px;
+}
+
+.carrito__items p {
+    text-align: center;
+    margin-top: 20px;
 }
