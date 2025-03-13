@@ -1,0 +1,11 @@
+# Usa la imagen base de Apache
+FROM httpd:2.4
+
+# Copia todas las carpetas y archivos dentro de /usr/local/apache2/htdocs/
+COPY ./html /usr/local/apache2/htdocs/
+
+# Expone el puerto 80
+EXPOSE 80
+
+# Comando para iniciar Apache
+CMD ["httpd-foreground"]

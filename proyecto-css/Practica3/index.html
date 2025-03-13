@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menú de Categorías -->
+    <nav class="menu">
+        <ul class="menu__list">
+            <li class="menu__item"><a href="#" class="menu__link" category="nuevo">Electrodomésticos</a>
+                <ul class="submenu">
+                    <li class="submenu__item"><a href="#" class="submenu__link">Licuadoras</a></li>
+                    <li class="submenu__item"><a href="#" class="submenu__link">Microondas</a></li>
+                </ul>
+            </li>
+            <li class="menu__item"><a href="#" class="menu__link">Moda</a>
+                <ul class="submenu">
+                    <li class="submenu__item"><a href="#" class="submenu__link">Ropa</a></li>
+                    <li class="submenu__item"><a href="#" class="submenu__link">Zapatos</a></li>
+                </ul>
+            </li>
+            <li class="menu__item"><a href="#" class="menu__link">Tecnología</a>
+                <ul class="submenu">
+                    <li class="submenu__item"><a href="#" class="submenu__link">Laptops</a></li>
+                    <li class="submenu__item"><a href="#" class="submenu__link">Smartphones</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Producto Destacado -->
+    <section class="producto">
+        <div class="producto__card">
+            <img src="producto.jpg" alt="Producto" class="producto__card-image">
+            <h3 class="producto__card-title">Smartphone X</h3>
+            <p class="producto__card-price producto__card-price--oferta">$599.99</p>
+            <button class="producto__card-button">Añadir al carrito</button>
+        </div>
+    </section>
+</body>
+</html>
