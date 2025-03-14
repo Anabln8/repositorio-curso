@@ -6,11 +6,14 @@
     <title>Tienda de Plantas y Jardinería</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
-      rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <!-- Font Awesome -->
-    <link rel="stylesheet"
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
@@ -21,88 +24,155 @@
         <div class="header__content">
           <div class="logo">
             <img
-              src="logo.png"
+              src="img/logo.png"
               alt="Tienda de Plantas y Jardinería"
               class="logo__image"
             />
           </div>
           <nav class="menu">
             <ul class="menu__list">
-              <li class="menu__item"><a href="#">Plantas de Interior</a></li>
+              <li class="menu__item submenu">
+                <a href="#">Productos</a>
+                <ul class="menu__dropdown">
+                  <li><a href="#interior">Plantas de interior</a></li>
+                  <li><a href="#exterior">Plantas de exterior</a></li>
+                  <li><a href="#cactus">Cactus y suculentas</a></li>
+                </ul>
+              </li>
               <li class="menu__item"><a href="#">Herramientas</a></li>
               <li class="menu__item"><a href="#">Macetas</a></li>
               <li class="menu__item"><a href="#">Contacto</a></li>
-              <li><a href="#carrito" class="carrito-toggle"><i class="fa-solid fa-cart-shopping"></i></a></li>
+              <li>
+                <a href="#carrito" class="carrito-toggle" category="1">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+              </li>
             </ul>
           </nav>
-          
         </div>
       </div>
     </header>
-
-    <!-- Sección de Productos -->
-    <section>
-      <div class="container">
-        <div class="productos">
-          <div class="producto">
-            <img src="img\planta.jpg" alt="Planta Suculenta" />
-            <div class="producto__info">
-              <h3 class="producto__card-title">Planta Colgante</h3>
-              <p class="producto__card-price">$9.99</p>
-              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+    <main>
+        <aside id="filter-menu">
+            <div class="container">
+              <h2>Filtrar Productos</h2>
+              <label for="categoria">Selecciona una categoría:</label>
+              <select id="categoria">
+                <option value="todos">Todos</option>
+                <option value="interior">Plantas de interior</option>
+                <option value="cactus">Cactus</option>
+                <option value="exterior">Suculentas</option>
+              </select>
+    
+              <div class="filtroProductos">
+                <div class="filtroProducto interior">Plantas Colgante</div>
+                <div class="filtroProducto interior">Planta con flor</div>
+                <div class="filtroProducto cactus">Camiseta</div>
+                <div class="filtroProducto cactus">Pantalón</div>
+                <div class="filtroProducto exterior">Sofá</div>
+                <div class="filtroProducto exterior">Juego de Platos</div>
+              </div>
             </div>
-          </div>
-          <div class="producto">
-            <img src="img\cactus.jpg" alt="Cactus Mini" />
-            <div class="producto__info">
-              <h3 class="producto__card-title">Cactus Mini</h3>
-              <p class="producto__card-price">$12.99</p>
-              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+          </aside>
+          
+      <!-- Sección de Productos -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="contador" id="contador">100</div>
+          <div class="productos">
+            <div class="producto">
+              <img src="img\planta.jpg" alt="Planta Suculenta" />
+              <div class="producto__info">
+                <h3 class="producto__card-title">Planta Colgante</h3>
+                <p class="producto__card-price">$9.99</p>
+                <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+              </div>
             </div>
-          </div>
-          <div class="producto">
-            <img src="img\cactus.jpg" alt="Orquídea" />
-            <div class="producto__info">
-              <h3 class="producto__card-title">Orquídea Blanca</h3>
-              <p class="producto__card-price">$24.99</p>
-              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+            <div class="producto">
+              <img src="img\cactus.jpg" alt="Cactus Mini" />
+              <div class="producto__info">
+                <h3 class="producto__card-title">Cactus Mini</h3>
+                <p class="producto__card-price">$12.99</p>
+                <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+              </div>
             </div>
-          </div>
-          <div class="producto">
-            <img src="img\cactus.jpg" alt="Helecho" />
-            <div class="producto__info">
-              <h3 class="producto__card-title">Helecho Verde</h3>
-              <p class="producto__card-price">$14.99</p>
-              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+            <div class="producto">
+              <img src="img\cactus.jpg" alt="Orquídea" />
+              <div class="producto__info">
+                <h3 class="producto__card-title">Orquídea Blanca</h3>
+                <p class="producto__card-price">$24.99</p>
+                <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+              </div>
             </div>
-          </div>
-          <div class="producto">
-            <img src="img\cactus.jpg" alt="Crisantemo" />
-            <div class="producto__info">
-              <h3 class="producto__card-title">Crisantemo</h3>
-              <p class="producto__card-price">$19.99</p>
-              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+            <div class="producto">
+              <img src="img\cactus.jpg" alt="Helecho" />
+              <div class="producto__info">
+                <h3 class="producto__card-title">Helecho Verde</h3>
+                <p class="producto__card-price">$14.99</p>
+                <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+              </div>
             </div>
-          </div>
-          <div class="producto">
-            <img src="img\cactus.jpg" alt="Bonsái" />
-            <div class="producto__info">
-              <h3 class="producto__card-title">Bonsái</h3>
-              <p class="producto__card-price">$39.99</p>
-              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+            <div class="producto">
+              <img src="img\cactus.jpg" alt="Crisantemo" />
+              <div class="producto__info">
+                <h3 class="producto__card-title">Crisantemo</h3>
+                <p class="producto__card-price">$19.99</p>
+                <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+              </div>
+            </div>
+            <div class="producto">
+              <img src="img\cactus.jpg" alt="Bonsái" />
+              <div class="producto__info">
+                <h3 class="producto__card-title">Bonsái</h3>
+                <p class="producto__card-price">$39.99</p>
+                <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
+      </section>
+    </main>
     <!-- Carrito de Compras (Lateral) -->
     <div id="carrito" class="carrito">
-      <a href="#" class="carrito-cerrar">X</a>
-      <h3>Carrito de Compras</h3>
+      <a href="#" class="carrito-cerrar"><i class="fa-solid fa-xmark"></i></a>
+      <h3>Carrito de Compra</h3>
       <div class="carrito__items">
         <p>No hay productos en el carrito.</p>
       </div>
     </div>
+    <script>
+        // Definir el tiempo inicial (en días, horas, minutos, segundos)
+        let days = 2;
+        let hours = 11;
+        let minutes = 20;
+        let seconds = 30;
+  
+        // Convertir todo a segundos
+        let totalSeconds = (days * 24 * 60 * 60) + (hours * 60 * 60) + (minutes * 60) + seconds;
+  
+        // Obtener el elemento para mostrar el contador
+        const contadorElemento = document.getElementById("contador");
+  
+        const intervalo = setInterval(() => {
+          // Calcular los días, horas, minutos y segundos restantes
+          let remainingDays = Math.floor(totalSeconds / (24 * 60 * 60));
+          let remainingHours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
+          let remainingMinutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+          let remainingSeconds = totalSeconds % 60;
+  
+          // Mostrar el tiempo restante en el formato adecuado
+          contadorElemento.textContent = `${remainingDays}d, ${remainingHours} h, ${remainingMinutes} min, ${remainingSeconds} seg`;
+  
+          // Restar 1 segundo
+          totalSeconds--;
+  
+          // Detener el intervalo cuando llegue a 0
+          if (totalSeconds < 0) {
+            clearInterval(intervalo);
+            contadorElemento.textContent = "¡Tiempo agotado!";
+          }
+        }, 1000); // Actualizar cada 1 segundo
+      </script>
+   
   </body>
 </html>
