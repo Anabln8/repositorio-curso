@@ -228,3 +228,99 @@ let redondeo = numRedondeo.toFixed(2);
 console.log(redondeo);
 
 // Ejercicio 28 
+
+let include = '¡Hola Mundo!';
+
+console.log(include.includes('Hola'));
+
+// Ejercicio 29
+
+let fru = "manzana,banana,pera";
+
+let palabras = fru.split(" ");
+
+console.log(palabras);
+
+let guiones = palabras.join('-');
+
+console.log(guiones);
+
+// Ejercicio 30
+
+let array = [10, 20, 30];
+
+let [a, b, c] = array
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+// Ejercicio 31
+
+let persona = { nombreUsuario: "Ana", edadUsuario: 30 };
+
+let { nombreUsuario, edadUsuario } = persona;
+
+console.log(nombreUsuario);
+console.log(edadUsuario);  
+
+// Ejercicio 32
+
+function crearContador() {
+  let contador = 0;
+   
+  return function(){
+    contador++;
+    console.log(contador);
+  };
+}
+
+const cuenta = crearContador();
+
+cuenta();
+cuenta();
+cuenta();
+cuenta();
+
+// Ejercicio 33
+
+let coche = {
+  marca: 'Seat',
+  mostrarMarca: function(){
+    console.log(this.marca);
+  }
+}
+
+coche.mostrarMarca();
+
+
+// Ejercicio 34
+
+class Rectangulo {
+  constructor(ancho, alto){
+    this.ancho = ancho;
+    this.alto = alto;
+  }
+
+  area(){
+    return this.ancho * this.alto;
+  }
+}
+
+let miRectangulo = new Rectangulo(10,20);
+
+console.log(miRectangulo.area());
+
+
+// Ejercicio 35
+
+const person = {
+  nombre: "Juan",
+  edad: 25,
+  ciudad: "Madrid",
+};
+const jsonPerson = JSON.stringify(person);
+console.log(jsonPerson); 
+
+const objetoPerson = JSON.parse(jsonPerson);
+console.log(objetoPerson);
