@@ -12,10 +12,11 @@
     />
     <link rel="stylesheet" href="style.css" />
     <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
   </head>
   <body>
     <!-- Header con menú y logo -->
@@ -52,29 +53,57 @@
         </div>
       </div>
     </header>
-    <main>
-        <aside id="filter-menu">
-            <div class="container">
-              <h2>Filtrar Productos</h2>
-              <label for="categoria">Selecciona una categoría:</label>
-              <select id="categoria">
-                <option value="todos">Todos</option>
-                <option value="interior">Plantas de interior</option>
-                <option value="cactus">Cactus</option>
-                <option value="exterior">Suculentas</option>
-              </select>
-    
-              <div class="filtroProductos">
-                <div class="filtroProducto interior">Plantas Colgante</div>
-                <div class="filtroProducto interior">Planta con flor</div>
-                <div class="filtroProducto cactus">Camiseta</div>
-                <div class="filtroProducto cactus">Pantalón</div>
-                <div class="filtroProducto exterior">Sofá</div>
-                <div class="filtroProducto exterior">Juego de Platos</div>
-              </div>
+
+    <section class="hero">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/hero1.jpg" alt="Oferta 1" />
+            <div class="offer-text">
+              <h2>¡Plantas con descuento!</h2>
+              <p>Compra ahora y ahorra hasta un 30% en plantas seleccionadas.</p>
             </div>
-          </aside>
-          
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hero1.jpg" alt="Oferta 2" />
+            <div class="offer-text">
+              <h2>¡Nuevas llegadas!</h2>
+              <p>Explora nuestra nueva colección de cactus y suculentas.</p>
+            </div>
+          </div>
+          <!-- Más slides según sea necesario -->
+        </div>
+        <!-- Agregar controles del swiper -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+
+    <aside id="filter-menu">
+      <div class="container">
+        <h2>Filtrar Productos</h2>
+        <label for="categoria">Selecciona una categoría:</label>
+        <select id="categoria" onchange="filterProducts()">
+          <option value="todos">Todos</option>
+          <option value="interior">Plantas de interior</option>
+          <option value="cactus">Cactus</option>
+          <option value="exterior">Suculentas</option>
+        </select>
+    
+        <div class="filtroProductos">
+          <div class="filtroProducto interior">Planta Colgante</div>
+          <div class="filtroProducto interior">Planta con flor</div>
+          <div class="filtroProducto cactus">Cactus Mini</div>
+          <div class="filtroProducto cactus">Cactus de Navidad</div>
+          <div class="filtroProducto exterior">Bonsái</div>
+          <div class="filtroProducto exterior">Helecho</div>
+        </div>
+      </div>
+    </aside>
+    
+    <main>
       <!-- Sección de Productos -->
       <section class="section-padding">
         <div class="container">
@@ -140,39 +169,17 @@
         <p>No hay productos en el carrito.</p>
       </div>
     </div>
-    <script>
-        // Definir el tiempo inicial (en días, horas, minutos, segundos)
-        let days = 2;
-        let hours = 11;
-        let minutes = 20;
-        let seconds = 30;
-  
-        // Convertir todo a segundos
-        let totalSeconds = (days * 24 * 60 * 60) + (hours * 60 * 60) + (minutes * 60) + seconds;
-  
-        // Obtener el elemento para mostrar el contador
-        const contadorElemento = document.getElementById("contador");
-  
-        const intervalo = setInterval(() => {
-          // Calcular los días, horas, minutos y segundos restantes
-          let remainingDays = Math.floor(totalSeconds / (24 * 60 * 60));
-          let remainingHours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
-          let remainingMinutes = Math.floor((totalSeconds % (60 * 60)) / 60);
-          let remainingSeconds = totalSeconds % 60;
-  
-          // Mostrar el tiempo restante en el formato adecuado
-          contadorElemento.textContent = `${remainingDays}d, ${remainingHours} h, ${remainingMinutes} min, ${remainingSeconds} seg`;
-  
-          // Restar 1 segundo
-          totalSeconds--;
-  
-          // Detener el intervalo cuando llegue a 0
-          if (totalSeconds < 0) {
-            clearInterval(intervalo);
-            contadorElemento.textContent = "¡Tiempo agotado!";
-          }
-        }, 1000); // Actualizar cada 1 segundo
-      </script>
+
+    <footer class="footer">
+      <div class="container">
+        <ul>
+          <li><a href="#">Políticas de Envío</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Chat en Vivo</a></li>
+        </ul>
+      </div>
+    </footer>
+   
    
   </body>
 </html>

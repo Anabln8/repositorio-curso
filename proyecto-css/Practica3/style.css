@@ -186,6 +186,7 @@ a[category="1"] {
   box-shadow: -4px 0 8px rgba(0, 0, 0, 0.3);
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
+  z-index: 1000;
 }
 
 #carrito:target {
@@ -238,15 +239,6 @@ a[category="1"] {
   color: #5a986f;
 }
 
-main {
-  display: flex;
-}
-aside {
-  max-width: 20%;
-  padding: 1.5rem;
-  background-color: #dadada;
-}
-
 select {
   display: none;
 }
@@ -290,4 +282,79 @@ select {
   }
 
 @media (prefers-color-scheme: dark) {
+}
+
+/* Hero */
+
+.hero {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer-text {
+  position: absolute;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.offer-text h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.offer-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.swiper-slide img {
+width: 100%;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #fff;
+  font-size: 2rem;
+  z-index: 1;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #2e2c2f;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  color: #7ab884;
 }
