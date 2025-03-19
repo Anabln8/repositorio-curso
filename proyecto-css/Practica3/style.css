@@ -52,28 +52,28 @@ body {
 
 .menu__link {
   text-decoration: none;
-  color: #ffffff; /* Color blanco para los enlaces */
+  color: #ffffff; 
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
 .menu__link:visited {
-  color: #ffffff; /* Evita el cambio de color en enlaces visitados */
+  color: #ffffff; 
 }
 
 .menu__link:hover,
 .menu__link:focus {
-  color: #7ab884; /* Color principal al pasar el mouse o enfocar */
+  color: #7ab884; 
 }
 
 .menu__link:active {
-  color: #ed6a5e; /* Color de alerta cuando se presiona */
+  color: #ed6a5e; 
 }
 
 /* Submenú */
 .menu__dropdown {
   position: absolute;
-  top: 75px;
+  top: 95px;
   background: #353336;
   display: none;
   list-style: none;
@@ -81,6 +81,7 @@ body {
   margin: 0;
   width: 170px;
   border-radius: 4px;
+  z-index: 5;
 }
 .menu__dropdown li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -290,6 +291,7 @@ select {
   width: 100%;
   position: relative;
   height: 100%;
+  z-index: 0;
 }
 
 .swiper-container {
@@ -340,6 +342,62 @@ width: 100%;
   z-index: 1;
 }
 
+
+
+/* --------*/
+
+/* Filtro Lateral */
+#filter-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* El panel está oculto por defecto */
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
+  transition: left 0.3s ease-in-out;
+  padding: 20px;
+  z-index: 1000;
+}
+
+#filter-menu.open {
+  left: 0; /* Cuando se añada la clase 'open', el panel se desliza hacia la derecha */
+}
+
+.filter-btn {
+  background-color: #7ab884;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #5a986f;
+}
+
+/* Productos */
+.producto {
+  display: block; /* Los productos están visibles por defecto */
+}
+
+.producto.interior,
+.producto.cactus,
+.producto.exterior {
+  display: block; /* Mostrar todos los productos inicialmente */
+}
+
+.producto.show {
+  display: block; /* Mostrar los productos filtrados */
+}
+
+
+
+
+
 /* Footer */
 
 .footer {
@@ -358,3 +416,4 @@ width: 100%;
 .footer a:hover {
   color: #7ab884;
 }
+

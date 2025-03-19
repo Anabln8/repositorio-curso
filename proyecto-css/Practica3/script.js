@@ -1,17 +1,31 @@
-function filterProducts() {
-  const category = document.getElementById("categoria").value;
-  const allProducts = document.querySelectorAll(".producto");
+// Seleccionamos los elementos necesarios
+const filterMenu = document.getElementById('filter-menu');
+const filterBtn = document.getElementById('filter-btn');
+const categoriaSelect = document.getElementById('categoria');
+const productos = document.querySelectorAll('.producto');
 
-  allProducts.forEach((product) => {
-    if (category === "todos") {
-      product.style.display = "block";
-    } else if (product.classList.contains(category)) {
-      product.style.display = "block";
-    } else {
-      product.style.display = "none";
+// Abrir y cerrar el menú de filtros al hacer clic en el botón
+filterBtn.addEventListener('click', () => {
+  filterMenu.classList.toggle('open');  // Toggle de la clase 'open' para abrir/cerrar el panel
+});
+
+// Filtrar productos por categoría al cambiar la selección
+categoriaSelect.addEventListener('change', (e) => {
+  const selectedCategory = e.target.value;
+
+  productos.forEach(producto => {
+    producto.classList.remove('show');  // Ocultar todos los productos primero
+
+    // Mostrar productos según la categoría seleccionada
+    if (selectedCategory === 'todos') {
+      producto.classList.add('show');
+    } else if (producto.classList.contains(selectedCategory)) {
+      producto.classList.add('show');
     }
   });
-}
+});
+
+
 
 const swiper = new Swiper(".swiper-container", {
   loop: true,

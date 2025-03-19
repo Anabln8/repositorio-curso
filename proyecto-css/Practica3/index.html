@@ -12,10 +12,14 @@
     />
     <link rel="stylesheet" href="style.css" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="script.js"></script>
   </head>
   <body>
@@ -54,14 +58,16 @@
       </div>
     </header>
 
-    <section class="hero">
+    <section class="hero swiper">
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="img/hero1.jpg" alt="Oferta 1" />
             <div class="offer-text">
               <h2>¡Plantas con descuento!</h2>
-              <p>Compra ahora y ahorra hasta un 30% en plantas seleccionadas.</p>
+              <p>
+                Compra ahora y ahorra hasta un 30% en plantas seleccionadas.
+              </p>
             </div>
           </div>
           <div class="swiper-slide">
@@ -80,77 +86,69 @@
       </div>
     </section>
 
-
-    <aside id="filter-menu">
-      <div class="container">
-        <h2>Filtrar Productos</h2>
-        <label for="categoria">Selecciona una categoría:</label>
-        <select id="categoria" onchange="filterProducts()">
-          <option value="todos">Todos</option>
-          <option value="interior">Plantas de interior</option>
-          <option value="cactus">Cactus</option>
-          <option value="exterior">Suculentas</option>
-        </select>
-    
-        <div class="filtroProductos">
-          <div class="filtroProducto interior">Planta Colgante</div>
-          <div class="filtroProducto interior">Planta con flor</div>
-          <div class="filtroProducto cactus">Cactus Mini</div>
-          <div class="filtroProducto cactus">Cactus de Navidad</div>
-          <div class="filtroProducto exterior">Bonsái</div>
-          <div class="filtroProducto exterior">Helecho</div>
-        </div>
-      </div>
-    </aside>
-    
     <main>
-      <!-- Sección de Productos -->
+      <!-- <button id="filter-btn" class="filter-btn">Mostrar Filtros</button>
+
+      <aside id="filter-menu">
+        <div class="container">
+          <h2>Filtrar Productos</h2>
+          <label for="categoria">Selecciona una categoría:</label>
+          <select id="categoria">
+            <option value="todos">Todos</option>
+            <option value="interior">Plantas de interior</option>
+            <option value="cactus">Cactus</option>
+            <option value="exterior">Suculentas</option>
+          </select>
+        </div>
+      </aside>-->
+
       <section class="section-padding">
         <div class="container">
-          <div class="contador" id="contador">100</div>
+          <!-- <div class="contador" id="contador">100</div> -->
           <div class="productos">
-            <div class="producto">
-              <img src="img\planta.jpg" alt="Planta Suculenta" />
+            <!-- Todos los productos tienen sus clases asociadas a categorías -->
+            <div class="producto interior">
+              <img src="img/planta.jpg" alt="Planta Suculenta" />
               <div class="producto__info">
                 <h3 class="producto__card-title">Planta Colgante</h3>
                 <p class="producto__card-price">$9.99</p>
                 <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
               </div>
             </div>
-            <div class="producto">
-              <img src="img\cactus.jpg" alt="Cactus Mini" />
+            <div class="producto cactus">
+              <img src="img/cactus.jpg" alt="Cactus Mini" />
               <div class="producto__info">
                 <h3 class="producto__card-title">Cactus Mini</h3>
                 <p class="producto__card-price">$12.99</p>
                 <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
               </div>
             </div>
-            <div class="producto">
-              <img src="img\cactus.jpg" alt="Orquídea" />
+            <div class="producto exterior">
+              <img src="img/cactus.jpg" alt="Orquídea" />
               <div class="producto__info">
                 <h3 class="producto__card-title">Orquídea Blanca</h3>
                 <p class="producto__card-price">$24.99</p>
                 <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
               </div>
             </div>
-            <div class="producto">
-              <img src="img\cactus.jpg" alt="Helecho" />
+            <div class="producto exterior">
+              <img src="img/cactus.jpg" alt="Helecho" />
               <div class="producto__info">
                 <h3 class="producto__card-title">Helecho Verde</h3>
                 <p class="producto__card-price">$14.99</p>
                 <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
               </div>
             </div>
-            <div class="producto">
-              <img src="img\cactus.jpg" alt="Crisantemo" />
+            <div class="producto cactus">
+              <img src="img/cactus.jpg" alt="Crisantemo" />
               <div class="producto__info">
                 <h3 class="producto__card-title">Crisantemo</h3>
                 <p class="producto__card-price">$19.99</p>
                 <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
               </div>
             </div>
-            <div class="producto">
-              <img src="img\cactus.jpg" alt="Bonsái" />
+            <div class="producto interior">
+              <img src="img/cactus.jpg" alt="Bonsái" />
               <div class="producto__info">
                 <h3 class="producto__card-title">Bonsái</h3>
                 <p class="producto__card-price">$39.99</p>
@@ -161,6 +159,7 @@
         </div>
       </section>
     </main>
+
     <!-- Carrito de Compras (Lateral) -->
     <div id="carrito" class="carrito">
       <a href="#" class="carrito-cerrar"><i class="fa-solid fa-xmark"></i></a>
@@ -179,7 +178,5 @@
         </ul>
       </div>
     </footer>
-   
-   
   </body>
 </html>
