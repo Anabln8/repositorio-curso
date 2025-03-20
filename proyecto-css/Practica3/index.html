@@ -1,93 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tienda de Plantas y Jardinería</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <!-- Header con menú y logo -->
-    <header class="header">
-      <div class="container">
-        <div class="header__content">
-          <div class="logo">
-            <img
-              src="img/logo.png"
-              alt="Tienda de Plantas y Jardinería"
-              class="logo__image"
-            />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda de Plantas y Jardinería</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Swiper -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+  <!-- Header con menú y logo -->
+  <header class="header">
+    <div class="container">
+      <div class="header__content">
+        <div class="logo">
+          <img src="img/logo.png" alt="Tienda de Plantas y Jardinería" class="logo__image" />
+        </div>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item submenu">
+              <a href="#">Productos</a>
+              <ul class="menu__dropdown">
+                <li><a href="#interior">Plantas de interior</a></li>
+                <li><a href="#exterior">Plantas de exterior</a></li>
+                <li><a href="#cactus">Cactus y suculentas</a></li>
+              </ul>
+            </li>
+            <li class="menu__item"><a href="#">Herramientas</a></li>
+            <li class="menu__item"><a href="#">Macetas</a></li>
+            <li class="menu__item"><a href="#">Contacto</a></li>
+            <li>
+              <a href="#carrito" class="carrito-toggle" category="1">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class=" hero">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/hero1.jpg" alt="Oferta 1" />
+          <div class="offer-text">
+            <h2>¡Plantas con descuento!</h2>
+            <p>Compra ahora y ahorra hasta un 30% en plantas seleccionadas.</p>
           </div>
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__item submenu">
-                <a href="#">Productos</a>
-                <ul class="menu__dropdown">
-                  <li><a href="#interior">Plantas de interior</a></li>
-                  <li><a href="#exterior">Plantas de exterior</a></li>
-                  <li><a href="#cactus">Cactus y suculentas</a></li>
-                </ul>
-              </li>
-              <li class="menu__item"><a href="#">Herramientas</a></li>
-              <li class="menu__item"><a href="#">Macetas</a></li>
-              <li class="menu__item"><a href="#">Contacto</a></li>
-              <li>
-                <a href="#carrito" class="carrito-toggle" category="1">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-              </li>
-            </ul>
-          </nav>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/hero1.jpg" alt="Oferta 2" />
+          <div class="offer-text">
+            <h2>¡Nuevas llegadas!</h2>
+            <p>Explora nuestra nueva colección de cactus y suculentas.</p>
+          </div>
         </div>
       </div>
-    </header>
+      <!-- Agregar controles del swiper -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    
+  </section>
 
-    <section class="hero swiper">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="img/hero1.jpg" alt="Oferta 1" />
-            <div class="offer-text">
-              <h2>¡Plantas con descuento!</h2>
-              <p>
-                Compra ahora y ahorra hasta un 30% en plantas seleccionadas.
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="img/hero1.jpg" alt="Oferta 2" />
-            <div class="offer-text">
-              <h2>¡Nuevas llegadas!</h2>
-              <p>Explora nuestra nueva colección de cactus y suculentas.</p>
-            </div>
-          </div>
-          <!-- Más slides según sea necesario -->
-        </div>
-        <!-- Agregar controles del swiper -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </section>
-
-    <main>
-      <!-- <button id="filter-btn" class="filter-btn">Mostrar Filtros</button>
+  <main>
+    <!-- <button id="filter-btn" class="filter-btn">Mostrar Filtros</button>
 
       <aside id="filter-menu">
         <div class="container">
@@ -102,81 +95,100 @@
         </div>
       </aside>-->
 
-      <section class="section-padding">
-        <div class="container">
-          <!-- <div class="contador" id="contador">100</div> -->
-          <div class="productos">
-            <!-- Todos los productos tienen sus clases asociadas a categorías -->
-            <div class="producto interior">
-              <img src="img/planta.jpg" alt="Planta Suculenta" />
-              <div class="producto__info">
-                <h3 class="producto__card-title">Planta Colgante</h3>
-                <p class="producto__card-price">$9.99</p>
-                <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
-              </div>
+    <section class="section-padding">
+      <div class="container">
+        <h2>Novedades</h2>
+        <!-- <div class="contador" id="contador">100</div> -->
+        <div class="productos">
+          <!-- Todos los productos tienen sus clases asociadas a categorías -->
+          <div class="producto interior">
+            <img src="img/planta.jpg" alt="Planta Suculenta" />
+            <div class="producto__info">
+              <h3 class="producto__card-title">Planta Colgante</h3>
+              <p class="producto__card-price">$9.99</p>
+              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
             </div>
-            <div class="producto cactus">
-              <img src="img/cactus.jpg" alt="Cactus Mini" />
-              <div class="producto__info">
-                <h3 class="producto__card-title">Cactus Mini</h3>
-                <p class="producto__card-price">$12.99</p>
-                <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
-              </div>
+          </div>
+          <div class="producto cactus">
+            <img src="img/cactus.jpg" alt="Cactus Mini" />
+            <div class="producto__info">
+              <h3 class="producto__card-title">Cactus Mini</h3>
+              <p class="producto__card-price">$12.99</p>
+              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
             </div>
-            <div class="producto exterior">
-              <img src="img/cactus.jpg" alt="Orquídea" />
-              <div class="producto__info">
-                <h3 class="producto__card-title">Orquídea Blanca</h3>
-                <p class="producto__card-price">$24.99</p>
-                <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
-              </div>
+          </div>
+          <div class="producto exterior">
+            <img src="img/cactus.jpg" alt="Orquídea" />
+            <div class="producto__info">
+              <h3 class="producto__card-title">Orquídea Blanca</h3>
+              <p class="producto__card-price">$24.99</p>
+              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
             </div>
-            <div class="producto exterior">
-              <img src="img/cactus.jpg" alt="Helecho" />
-              <div class="producto__info">
-                <h3 class="producto__card-title">Helecho Verde</h3>
-                <p class="producto__card-price">$14.99</p>
-                <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
-              </div>
+          </div>
+          <div class="producto exterior">
+            <img src="img/cactus.jpg" alt="Helecho" />
+            <div class="producto__info">
+              <h3 class="producto__card-title">Helecho Verde</h3>
+              <p class="producto__card-price">$14.99</p>
+              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
             </div>
-            <div class="producto cactus">
-              <img src="img/cactus.jpg" alt="Crisantemo" />
-              <div class="producto__info">
-                <h3 class="producto__card-title">Crisantemo</h3>
-                <p class="producto__card-price">$19.99</p>
-                <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
-              </div>
+          </div>
+          <div class="producto cactus">
+            <img src="img/cactus.jpg" alt="Crisantemo" />
+            <div class="producto__info">
+              <h3 class="producto__card-title">Crisantemo</h3>
+              <p class="producto__card-price">$19.99</p>
+              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
             </div>
-            <div class="producto interior">
-              <img src="img/cactus.jpg" alt="Bonsái" />
-              <div class="producto__info">
-                <h3 class="producto__card-title">Bonsái</h3>
-                <p class="producto__card-price">$39.99</p>
-                <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
-              </div>
+          </div>
+          <div class="producto interior">
+            <img src="img/cactus.jpg" alt="Bonsái" />
+            <div class="producto__info">
+              <h3 class="producto__card-title">Bonsái</h3>
+              <p class="producto__card-price">$39.99</p>
+              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+            </div>
+          </div>
+          <div class="producto interior">
+            <img src="img/cactus.jpg" alt="Bonsái" />
+            <div class="producto__info">
+              <h3 class="producto__card-title">Bonsái</h3>
+              <p class="producto__card-price">$39.99</p>
+              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
+            </div>
+          </div>
+          <div class="producto interior">
+            <img src="img/cactus.jpg" alt="Bonsái" />
+            <div class="producto__info">
+              <h3 class="producto__card-title">Bonsái</h3>
+              <p class="producto__card-price">$39.99</p>
+              <a href="#carrito" class="agregar-carrito">Añadir al carrito</a>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- Carrito de Compras (Lateral) -->
-    <div id="carrito" class="carrito">
-      <a href="#" class="carrito-cerrar"><i class="fa-solid fa-xmark"></i></a>
-      <h3>Carrito de Compra</h3>
-      <div class="carrito__items">
-        <p>No hay productos en el carrito.</p>
       </div>
+    </section>
+  </main>
+
+  <!-- Carrito de Compras (Lateral) -->
+  <div id="carrito" class="carrito">
+    <a href="#" class="carrito-cerrar"><i class="fa-solid fa-xmark"></i></a>
+    <h3>Carrito de Compra</h3>
+    <div class="carrito__items">
+      <p>No hay productos en el carrito.</p>
     </div>
+  </div>
 
-    <footer class="footer">
-      <div class="container">
-        <ul>
-          <li><a href="#">Políticas de Envío</a></li>
-          <li><a href="#">Términos y Condiciones</a></li>
-          <li><a href="#">Chat en Vivo</a></li>
-        </ul>
-      </div>
-    </footer>
-  </body>
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer-section">
+        <li><a href="#">Políticas de Envío</a></li>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Chat en Vivo</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>

@@ -1,47 +1,27 @@
-// Seleccionamos los elementos necesarios
-const filterMenu = document.getElementById('filter-menu');
-const filterBtn = document.getElementById('filter-btn');
-const categoriaSelect = document.getElementById('categoria');
-const productos = document.querySelectorAll('.producto');
 
-// Abrir y cerrar el menú de filtros al hacer clic en el botón
-filterBtn.addEventListener('click', () => {
-  filterMenu.classList.toggle('open');  // Toggle de la clase 'open' para abrir/cerrar el panel
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+        const swiper = new Swiper(".swiper", {
+            loop: true,
+            autoplay: {
+                delay: 50000000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    }, 100);
 });
 
-// Filtrar productos por categoría al cambiar la selección
-categoriaSelect.addEventListener('change', (e) => {
-  const selectedCategory = e.target.value;
-
-  productos.forEach(producto => {
-    producto.classList.remove('show');  // Ocultar todos los productos primero
-
-    // Mostrar productos según la categoría seleccionada
-    if (selectedCategory === 'todos') {
-      producto.classList.add('show');
-    } else if (producto.classList.contains(selectedCategory)) {
-      producto.classList.add('show');
-    }
-  });
-});
-
-
-
-const swiper = new Swiper(".swiper-container", {
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+  
 
 // Definir el tiempo inicial (en días, horas, minutos, segundos)
 let days = 2;

@@ -1,4 +1,8 @@
 /* Estilos generales */
+:root {
+  --swiper-theme-color: #ffffff !important;
+}
+
 body {
   font-family: "Nunito", sans-serif;
   margin: 0;
@@ -19,7 +23,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
   height: 80px;
 }
 
@@ -50,25 +53,6 @@ body {
   padding-left: 32px;
 }
 
-.menu__link {
-  text-decoration: none;
-  color: #ffffff; 
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-.menu__link:visited {
-  color: #ffffff; 
-}
-
-.menu__link:hover,
-.menu__link:focus {
-  color: #7ab884; 
-}
-
-.menu__link:active {
-  color: #ed6a5e; 
-}
 
 /* Submenú */
 .menu__dropdown {
@@ -110,7 +94,7 @@ a[category="1"] {
 /* Productos */
 
 .section-padding {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .productos {
@@ -294,17 +278,16 @@ select {
   z-index: 0;
 }
 
-.swiper-container {
+.swiper {
   width: 100%;
-  height: 100%;
+  height: 400px; /* Ajusta según necesites */
 }
-
 .swiper-slide {
-  position: relative;
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
 }
+
 
 .offer-text {
   position: absolute;
@@ -340,58 +323,7 @@ width: 100%;
   color: #fff;
   font-size: 2rem;
   z-index: 1;
-}
-
-
-
-/* --------*/
-
-/* Filtro Lateral */
-#filter-menu {
-  position: fixed;
-  top: 0;
-  left: -250px; /* El panel está oculto por defecto */
-  width: 250px;
-  height: 100%;
-  background-color: #fff;
-  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
-  transition: left 0.3s ease-in-out;
-  padding: 20px;
-  z-index: 1000;
-}
-
-#filter-menu.open {
-  left: 0; /* Cuando se añada la clase 'open', el panel se desliza hacia la derecha */
-}
-
-.filter-btn {
-  background-color: #7ab884;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.filter-btn:hover {
-  background-color: #5a986f;
-}
-
-/* Productos */
-.producto {
-  display: block; /* Los productos están visibles por defecto */
-}
-
-.producto.interior,
-.producto.cactus,
-.producto.exterior {
-  display: block; /* Mostrar todos los productos inicialmente */
-}
-
-.producto.show {
-  display: block; /* Mostrar los productos filtrados */
+  
 }
 
 
@@ -415,5 +347,12 @@ width: 100%;
 
 .footer a:hover {
   color: #7ab884;
+}
+.footer-section{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap:24px;
 }
 
